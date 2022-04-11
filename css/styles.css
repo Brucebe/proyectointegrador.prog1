@@ -6,3 +6,8 @@ body{
     background-color: burlywood;
 }
 
+.canciones{
+    display: flex;
+    flex-wrap: wrap;
+}
+
