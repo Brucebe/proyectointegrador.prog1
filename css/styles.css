@@ -3,22 +3,32 @@ body{
     margin: 10px;
 }
 
-ul.principales{
+.principales{
     list-style: none;
     display: flex;
-    font-size: 22px;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+.principales li{
+    margin: 10px;
+    font-size: 24px;
+}
+
 .header{
     display: flex;
+    max-width: 1430px;
+    background-color: blueviolet;
+    border-radius: 10px;
     justify-content: space-between;
     align-items: center;
     padding: 5px 25px;
 }
 
 .titulo{
-    font-size: 28px;
+    background-color: aliceblue;
+    font-size: 20px;
+    border-radius: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 h3{
@@ -31,9 +41,9 @@ h3{
     border-radius: 10px;
 }
 .musica{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;   
     justify-content: space-around;
+    max-width: 1430px;
     background-color: lightseagreen;
     list-style: none;
     text-decoration: none;
@@ -49,17 +59,34 @@ a.index{
     text-decoration: none;
     color: blanchedalmond;
 }
-li{
+.musica li{
+    width: 19%;
     margin: 8px;
     
 }
 a img{
-    width: 260px;
+    width: 100%;
 }
 
+.footer{
+    display: flex;
+    max-width: 1430px;
+    background-color: blueviolet;
+    border-radius: 10px;
+
+}
+.footer ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+.footer ul li{
+    margin: 10px;
+}
 /*detalle canciones*/
 
-.detallecanciones{
+.pagdetalles{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,6 +95,12 @@ a img{
     padding: 20px;
     border-radius: 10px;
 }
-.canciondetalleimg{
+.detalleimg{
     width: 350px;
 }
+
+.pagdetalles ul li{
+    margin: 30px 0px;
+}
+
+
