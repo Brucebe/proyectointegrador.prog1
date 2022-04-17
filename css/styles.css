@@ -112,3 +112,28 @@ iframe{
     width: 400px;
 }
 
+.generos{
+    display: flex;   
+    justify-content: space-around;
+    max-width: 1430px;
+    background-color: lightseagreen;
+    list-style: none;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.generos li{
+    width: 19%;
+    margin: 8px;
+}
+
+h5{
+    color: darkblue;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: brown;
+    padding: 5px 0px;
+    padding-left: 30px;
+    border-radius: 10px;
+}
