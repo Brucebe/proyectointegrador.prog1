@@ -11,7 +11,7 @@ body{
 }
 
 .principales li{
-    margin: 5px;
+    margin: 10px;
     font-size: 24px;
 }
 
@@ -49,16 +49,17 @@ h3{
     padding: 4px;
     border-radius: 10px;
 }
+
+
 a{
     text-decoration: none;
-}
-header a{
     color: black;
 }
 
 a.index{
     color: blanchedalmond;
 }
+
 .musica li{
     width: 19%;
     margin: 8px;
@@ -70,17 +71,14 @@ a img{
 
 .footer{
     display: flex;
-    max-width: 1430px;
     background-color: blueviolet;
     border-radius: 10px;
-
 }
 .footer ul{
     list-style: none;
     display: flex;
-    
+    justify-content: end;
 }
-
 .footer ul li{
     margin: 10px;
 }
@@ -106,9 +104,12 @@ a img{
     margin: 30px 0px;
     font-size: 20px;
 }
+
 .pagdetalles a{
     color: black;
 }
+
 iframe{
     width: 400px;
 }
+
