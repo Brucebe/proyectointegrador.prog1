@@ -137,3 +137,13 @@ h5{
     padding-left: 30px;
     border-radius: 10px;
 }
+
+.addplaylist{
+    background-color: aquamarine;
+    color: black;
+    padding: 10px 10px;
+    text-decoration: none;
+    border-color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
