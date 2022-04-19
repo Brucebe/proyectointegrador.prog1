@@ -15,7 +15,7 @@ body{
     font-size: 24px;
 }
 
-.header{
+header{
     display: flex;
     background-color: blueviolet;
     border-radius: 10px;
