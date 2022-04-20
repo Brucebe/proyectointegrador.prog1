@@ -15,7 +15,7 @@ body{
     font-size: 24px;
 }
 
-.header{
+header{
     display: flex;
     background-color: blueviolet;
     border-radius: 10px;
@@ -162,4 +162,12 @@ h5{
     margin: 25px;
     padding: 1px 20px;
     border-radius: 10px;
+}
+
+.resultadobusqueda ul{
+    list-style: none;
+}
+.lipadre{
+    font-weight: bold;
+    margin: 5px;
 }
