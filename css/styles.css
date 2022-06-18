@@ -68,6 +68,10 @@ a img{
     width: 100%;
 }
 
+.tamanoimg{
+    width: 100%;
+}
+
 .footer{
     display: flex;
     background-color: blueviolet;
