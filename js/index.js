@@ -1,5 +1,4 @@
-const url = 'https://api.allorigins.win/raw?url=Ac%C3%A1VaLaURLDelEndpointDeDeezer'
-
+const url = 'https://api.allorigins.win/raw?url=http://api.deezer.com/chart'
 const api_key = '299e618bece8bb75f2513f88b3f3f809'
 
 
