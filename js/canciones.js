@@ -25,20 +25,27 @@ fetch(urlDetalleCancion)
     //Guardar favoritos 
     let favoritos = [];
 
-    let link= document.querySelector("a");  // revisar esto
+    //Chequear si hay algo en favoritos
+    let recuperoStorage = localStorage.getItem("favoritos");  //primero traigo los datos, no importa si hay o no algo. una propiedad de localstorage q permite recuperar algo (get item), dentro de esta indicar cual es la posicion que queremos recuperar (favoritos)
+
+    if(recuperoStorage !== undefined) {
+        favoritos = JSON.parse(recuperoStorage)
+    } // le preguntamos si recupero storage es distinto de undefined. si es distinto de undefines quiero q se quede osea lo tengo q pasar a..., y eso q recupere lo quiero guardar en mi array de favoritos 
+
+
+    let link= document.querySelector(".addplaylist"); 
 
     //Definir evento para el link 
     link.addEventListener("click", function(evento){    // evento es un parametro, cuando lo use adentro hay q respetar lo q pusimos aca
         //evitar default del link
-        evento.preventDefault()
+        evento.preventDefault()  // frenar el link
 
         //Agregar un data al array 
-        let cancionFavoritos = favoritos.push(idCancion)
+        favoritos.push(idCancion)
 
         //Agregar el array a localStorage. Antes hay que pasarlo a string
-        let cancionFavoritosToString = JSON.stringify(cancionFavoritos)
-
-        localStorage.setItem('favoritos', cancionFavoritosToString)
+        let cancionFavoritosToString = JSON.stringify(favoritos);
+        localStorage.setItem('favoritos', cancionFavoritosToString) //el favoritos es= dentro de mi objeto literal donde lo voy a guardar, y el segundo parametro son los datos 
  
         console.log(localStorage);
         //Minuto 40 del video 
