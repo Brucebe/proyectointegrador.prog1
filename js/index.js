@@ -48,10 +48,6 @@ for(i=0; i<5; i++){
 
     })
 
-    
-
-
-
     .catch(function(error){
         console.log(error);
     })
