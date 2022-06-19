@@ -6,11 +6,13 @@ let idCancion = qsToObject.get('id'); // Obtengo el id de la cancion
 
 fetch('https://api.allorigins.win/raw?url=https://api.deezer.com/track/3135556')
  .then(function(response){
-     return response.json()
+     return response.json();  // Procesarlo y dejarlo en un objeto literal para que yo lo pueda trabajar 
  })
  .then(function(data){
     console.log(data);
 
+
+    
     //Guardar favoritos 
     let favoritos = [];
 
@@ -32,11 +34,6 @@ fetch('https://api.allorigins.win/raw?url=https://api.deezer.com/track/3135556')
         console.log(localStorage);
         //Minuto 40 del video 
     })
-
-
-
-
-
 
  })
  .catch(function(error){
