@@ -15,12 +15,15 @@ fetch(urlDetalleCancion)
     let nombrecancion = document.querySelector('.nombrecancion');
     let nombreartista = document.querySelector('.nombreartista')
     let nombredisco = document.querySelector('.nombredisco')
+    let playercancion = document.querySelector('.player')
 
-    detalleimg.src = data.album.md5_image;
+    detalleimg.src = `https://e-cdns-images.dzcdn.net/images/cover/${data.md5_image}/528x528-000000-80-0-0.jpg`;
     nombrecancion.innerText = data.title;
     nombreartista.innerText = data.artist.name;
     nombredisco.innerText = data.album.title; 
-
+    playercancion.src = `https://widget.deezer.com/widget/dark/track/${idCancion}`
+    
+   
 
     //Guardar favoritos 
     let favoritos = [];
@@ -28,9 +31,11 @@ fetch(urlDetalleCancion)
     //Chequear si hay algo en favoritos
     let recuperoStorage = localStorage.getItem("favoritos");  //primero traigo los datos, no importa si hay o no algo. una propiedad de localstorage q permite recuperar algo (get item), dentro de esta indicar cual es la posicion que queremos recuperar (favoritos)
 
-    if(recuperoStorage !== undefined) {
-        favoritos = JSON.parse(recuperoStorage)
-    } // le preguntamos si recupero storage es distinto de undefined. si es distinto de undefines quiero q se quede osea lo tengo q pasar a..., y eso q recupere lo quiero guardar en mi array de favoritos 
+
+    if(recuperoStorage) { // si este if cuando pregunta tiene un null o undefined => esas dos situaciones van a evaluar en el if como false // si tiene una variable, lo q devuleve es true 
+        let favoritosToArray = JSON.parse(recuperoStorage)
+        favoritos = favoritosToArray
+    } // le preguntamos si recupero storage es distinto de undefined. si es distinto de undefines quiero q se quede osea lo tengo q pasar a parse (transformar una cadena de texto en formato de json a escuwn dato), y eso q recupere lo quiero guardar en mi array de favoritos 
 
 
     let link= document.querySelector(".addplaylist"); 
