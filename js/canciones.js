@@ -1,18 +1,27 @@
 //Detalle de una canción  
-let queryString = location.search; // Obtengo la qs
+let queryString = location.search; // Obtengo la qs, location es una propiedad de window y search me trae la qs
 let qsToObject = new URLSearchParams(queryString); // Un objeto literal basado en la qs
 let idCancion = qsToObject.get('id'); // Obtengo el id de la cancion  
 
+let urlDetalleCancion = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idCancion}`
 
-fetch('https://api.allorigins.win/raw?url=https://api.deezer.com/track/3135556')
+fetch(urlDetalleCancion)
  .then(function(response){
      return response.json();  // Procesarlo y dejarlo en un objeto literal para que yo lo pueda trabajar 
  })
  .then(function(data){
     console.log(data);
+    let detalleimg = document.querySelector('.detalleimg') 
+    let nombrecancion = document.querySelector('.nombrecancion');
+    let nombreartista = document.querySelector('.nombreartista')
+    let nombredisco = document.querySelector('.nombredisco')
+
+    detalleimg.src = data.album.md5_image;
+    nombrecancion.innerText = data.title;
+    nombreartista.innerText = data.artist.name;
+    nombredisco.innerText = data.album.title; 
 
 
-    
     //Guardar favoritos 
     let favoritos = [];
 
