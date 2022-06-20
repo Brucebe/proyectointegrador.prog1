@@ -10,11 +10,12 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${idArt
     .then(function(data){
         console.log(data);
 
-    let fotoDelArtista = document.querySelector('.detalleimg')
+    let detalleimg = document.querySelector('.detalleimg')
     let nombreArtista = document.querySelector('.nombreArtista')
     let topTracks = document.querySelector('.topTracks')
 
     nombreArtista.innerText = 'Nombre del Artista: ' + data.name;
+    detalleimg.src = `https://api.deezer.com/artist/${data.id}/image`
     
         fetch(`https://cors-anywhere.herokuapp.com/${data.tracklist}`)
         .then(function(response){
