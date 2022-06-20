@@ -10,8 +10,10 @@ window.addEventListener("load", function () {
 
     .then(function(data){
         console.log(data);
-
-
+        for(i=0; i<25; i++){
+    document.querySelector('h4').innerText = 'RESULTADO: ' + data.data.artist[i].name
+        }
+        
     })
 
     .catch(function(error){

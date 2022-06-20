@@ -15,7 +15,7 @@ fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/artist/${idArt
     let topTracks = document.querySelector('.topTracks')
 
     nombreArtista.innerText = 'Nombre del Artista: ' + data.name;
-
+    
         fetch(`https://cors-anywhere.herokuapp.com/${data.tracklist}`)
         .then(function(response){
             return response.json()
