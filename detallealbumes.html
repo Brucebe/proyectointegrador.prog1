@@ -12,42 +12,41 @@
 
 <body>
     <header>
-            <h1><a class="titulo" href="index.html">Music Session</a></h1>
-            <ul class="principales">
-                <li><a href="index.html#canciones">Canciones</a></li>
-                <li><a href="index.html#albumes">Albumes</a></li>
-                <li><a href="index.html#artistas">Artistas</a></li>
-                <li><a href="generos.html">Generos</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-            </ul>
-            <form action="resultadodebusqueda.html" method="get">
-                <input type="text" name="usuario" value="">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </form>
+        <h1><a class="titulo" href="index.html">Music Session</a></h1>
+        <ul class="principales">
+            <li><a href="index.html#canciones">Canciones</a></li>
+            <li><a href="index.html#albumes">Albumes</a></li>
+            <li><a href="index.html#artistas">Artistas</a></li>
+            <li><a href="generos.html">Generos</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+        </ul>
+        <form action="resultadodebusqueda.html" method="get">
+            <input type="text" name="usuario" value="">
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     </header>
     <main>
         <section class="pagdetalles">
             <img class="detalleimg" src="./img/Abbey Road.jpeg" alt="foto disco">
             <ul>
-                <li>Nombre del disco: Abbey Road</li>
-                <li>Artista: <a href="detalleartistas.html">The Beatles</a></li>
-                <li>Genero: <a href="generos.html">Pop/rock</a></li>
-                <li>Publicacion: 26 de septiembre de 1969</li>
+                <li class="nombreAlbum"></li>
+                <li class="artista">Artista: <a href="detalleartistas.html">The Beatles</a></li>
+                <li class="tipoDeGenero">Genero: <a href="generos.html">Pop/rock</a></li>
+                <li class="publicacion">Publicacion: 26 de septiembre de 1969</li>
             </ul>
 
-            <iframe style="border-radius:12px"
-                src="https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN?utm_source=generator" width="100%"
-                height="380" frameBorder="0" allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            <iframe title="deezer-widget" src="https://widget.deezer.com/widget/dark/album/302127" width="100%"
+                height="300" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write">
+            </iframe>
         </section>
     </main>
     <footer>
         <section class="footer">
             <h4>Pagina de Felix Alexander y Bruno Ebert</h4>
             <ul>
-                <li>Felix A:   <a href="mailto:falexander@udesa.edu.ar">MAIL</a></li>
+                <li>Felix A: <a href="mailto:falexander@udesa.edu.ar">MAIL</a></li>
                 <li> <a href="tel:+5491122844081">TEL</a></li>
-                <li>Bruno E:   <a href="mailto:bebert@udesa.edu.ar">MAIL</a></li>
+                <li>Bruno E: <a href="mailto:bebert@udesa.edu.ar">MAIL</a></li>
                 <li> <a href="tel:+5491166807476">TEL</a></li>
             </ul>
         </section>

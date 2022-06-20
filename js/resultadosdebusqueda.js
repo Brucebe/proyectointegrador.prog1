@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
     let queryString = location.search;
     console.log(queryString);
     
-    fetch(`https://api.deezer.com/search${queryString}`)
+    fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/search${queryString}`)
     .then(function(response){
         return response.json()
     })
