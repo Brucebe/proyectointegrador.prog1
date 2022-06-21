@@ -5,7 +5,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
     })
     .then(function (data) {
         console.log(data);
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
 
             document.getElementById('canciones').querySelector('ul').innerHTML +=
                 `
@@ -20,7 +20,7 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
         }
         //Albumes populares
 
-        for (i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
 
             document.getElementById('albumes').querySelector('ul').innerHTML +=
                 `
@@ -34,7 +34,8 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
        `
         }
 
-        for (i = 0; i < 5; i++) {
+        //Artistas populares
+        for (let i = 0; i < 5; i++) {
 
             document.getElementById('artistas').querySelector('ul').innerHTML +=
                 `
@@ -50,5 +51,6 @@ fetch('https://cors-anywhere.herokuapp.com/https://api.deezer.com/chart')
     })
 
     .catch(function(error) {
+        
         console.log(error);
     })

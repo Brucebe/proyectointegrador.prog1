@@ -1,5 +1,5 @@
-let queryString = location.search; 
-let qsToObject = new URLSearchParams(queryString); 
+let queryString = location.search;
+let qsToObject = new URLSearchParams(queryString);
 let idGenero = qsToObject.get('id');
 
 fetch(`https://cors-anywhere.herokuapp.com/https://api.deezer.com/genre/${idGenero}`)

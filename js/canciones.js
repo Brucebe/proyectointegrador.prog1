@@ -38,7 +38,7 @@ fetch(urlDetalleCancion)
     } // le preguntamos si recupero storage es distinto de undefined. si es distinto de undefines quiero q se quede osea lo tengo q pasar a parse (transformar una cadena de texto en formato de json a escuwn dato), y eso q recupere lo quiero guardar en mi array de favoritos 
 
 
-    let link= document.querySelector(".addplaylist"); 
+    let link= document.querySelector(".addplaylist");
 
     if(favoritos.includes(idCancion)){
         //cambiarle el mensaje al usuario
