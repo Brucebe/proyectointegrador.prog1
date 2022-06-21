@@ -1,13 +1,13 @@
-//Detalle de una canción  
-let queryString = location.search; // Obtengo la qs, location es una propiedad de window y search me trae la qs
-let qsToObject = new URLSearchParams(queryString); // Un objeto literal basado en la qs
-let idCancion = qsToObject.get('id'); // Obtengo el id de la cancion  
+
+let queryString = location.search; 
+let qsToObject = new URLSearchParams(queryString); 
+let idCancion = qsToObject.get('id'); 
 
 let urlDetalleCancion = `https://cors-anywhere.herokuapp.com/https://api.deezer.com/track/${idCancion}`
 
 fetch(urlDetalleCancion)
  .then(function(response){
-     return response.json();  // Procesarlo y dejarlo en un objeto literal para que yo lo pueda trabajar 
+     return response.json();  
  })
  .then(function(data){
     console.log(data);
@@ -28,7 +28,7 @@ fetch(urlDetalleCancion)
     //Guardar favoritos 
     let favoritos = [];
 
-    //Chequear si hay algo en favoritos
+    
     let recuperoStorage = localStorage.getItem("favoritos");  //primero traigo los datos, no importa si hay o no algo. una propiedad de localstorage q permite recuperar algo (get item), dentro de esta indicar cual es la posicion que queremos recuperar (favoritos)
 
 
