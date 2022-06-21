@@ -175,3 +175,9 @@ h5{
     font-weight: bold;
     margin: 5px;
 }
+
+/*pag de playlist*/
+
+.cancionesplaylist{
+    width: 20%;
+}

@@ -26,7 +26,7 @@ for(let i=0; i<favoritos.length ; i++){
     .then(function(data){
     //aca trabajo con los datos 
         contenidoSection += `<article>
-                                <a class="index" href="./detallecanciones.html?id=${data.tracks.data[i].id}">
+                                <a class="playlist" href="./detallecanciones.html?id=${data.id}">
                                 <h4>${data.title}</h4>
     
                                 <img class= "tamanoimg" src= "https://e-cdns-images.dzcdn.net/images/cover/${data.md5_image}/528x528-000000-80-0-0.jpg">
